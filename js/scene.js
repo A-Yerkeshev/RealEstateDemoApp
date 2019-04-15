@@ -15,7 +15,7 @@ scene.add(ambientLight);
 var directionalLight = new THREE.DirectionalLight(0xFFFEE1);
 scene.add(directionalLight);
 
-var loader = new THREE.OBJLoader();
+var loader = new THREE.TDSLoader();
 loader.load("models/frontpage_building/city3.obj", function(model) {
   scene.add(model);
 }, undefined, function(error) {
