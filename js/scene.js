@@ -15,7 +15,7 @@ scene.add(ambientLight);
 var directionalLight = new THREE.DirectionalLight(0xFFFEE1);
 scene.add(directionalLight);
 
-var loader = new THREE.ObjectLoader();
+var loader = new THREE.OBJLoader();
 loader.load("models/modern_bungalow.obj", function(model) {
   scene.add(model);
 });
