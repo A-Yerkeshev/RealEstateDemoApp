@@ -15,6 +15,11 @@ scene.add(ambientLight);
 var directionalLight = new THREE.DirectionalLight(0xFFFEE1);
 scene.add(directionalLight);
 
+var loader = new THREE.ObjectLoader();
+loader.load("models/modern_bungalow.obj", function(model) {
+  scene.add(model);
+});
+
 var geometry = new THREE.PlaneGeometry( 12, 12 );
 var material = new THREE.MeshLambertMaterial( {color: 0x2D2D2D} );
 var floor = new THREE.Mesh( geometry, material );
