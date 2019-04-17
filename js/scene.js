@@ -9,6 +9,8 @@ controls.update();
 controls.target = new THREE.Vector3(0, 4, 0);
 controls.autoRotate = true;
 controls.autoRotateSpeed = 0.5;
+controls.minDistance = 6;
+controls.maxDistance = 15;
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
