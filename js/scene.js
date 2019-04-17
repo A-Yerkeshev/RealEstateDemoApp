@@ -4,9 +4,9 @@ scene.background = new THREE.Color(0x2D2D2D);
 var camera = new THREE.PerspectiveCamera(
   75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 var controls = new THREE.OrbitControls(camera);
-camera.position.set(0, 4, 8);
+camera.position.set(0, 5, 10);
 controls.update();
-controls.target = new THREE.Vector3(0, 3, 0);
+controls.target = new THREE.Vector3(0, 4, 0);
 controls.autoRotate = true;
 controls.autoRotateSpeed = 0.5;
 
@@ -28,8 +28,8 @@ mtlLoader.load("city3.mtl", function(materials) {
     objLoader.setMaterials(materials);
     objLoader.setPath("models/frontpage_building/");
     objLoader.load("city3.obj", function (object) {
-      object.scale.set(0.3, 0.3, 0.3);
-      object.position.set(-6, 1, 8);
+      object.scale.set(0.4, 0.4, 0.4);
+      object.position.set(-8, 1, 11);
       scene.add(object);
     }, undefined, function(error) {
       console.error(error);
