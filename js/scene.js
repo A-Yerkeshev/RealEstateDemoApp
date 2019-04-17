@@ -12,6 +12,13 @@ controls.autoRotateSpeed = 0.5;
 controls.minDistance = 6;
 controls.maxDistance = 15;
 
+function onWindowResize() {
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+};
+window.addEventListener('resize', onWindowResize, false);
+
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
