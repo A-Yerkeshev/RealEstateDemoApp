@@ -30,6 +30,7 @@ a {
   padding: 1%;
   margin: 0.5%;
   cursor: default;
+  text-decoration: none;
   transition: padding, 0.3s;
 }
 
