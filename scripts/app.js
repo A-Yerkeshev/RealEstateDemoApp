@@ -8,5 +8,8 @@ Module.config(function($routeProvider) {
     .when('/buy', {
       templateUrl: 'views/catalog.html'
     })
+    .when('/rent', {
+      templateUrl: 'views/catalog.html'
+    })
     .otherwise('/');
 });
