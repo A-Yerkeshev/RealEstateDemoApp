@@ -1,6 +1,5 @@
 <div ng-controller="PropertyController">
-  Buy list
   <div ng-repeat="property in propertiesForSale">
-    <img ng-src="{{property.directory + property.image}}">
+    <property-item></property-item>
   </div>
 </div>
