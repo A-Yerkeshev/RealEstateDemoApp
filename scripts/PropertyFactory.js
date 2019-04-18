@@ -26,6 +26,18 @@ Module.factory('PropertyFactory', [function() {
     return list;
   };
 
+  Factory.getPropertiesForRent = function() {
+    var list = [];
+
+    properties.forEach(function(property) {
+      if (property.forRent) {
+        list.push(property);
+      };
+    });
+
+    return list;
+  };
+
   return Factory;
 
 }]);
