@@ -1,3 +1,6 @@
-Module.controller('PropertyController', ['$scope', function($scope) {
+Module.controller('PropertyController',
+  ['$scope', 'PropertyFactory', function($scope, PropertyFactory) {
+
+    $scope.propertiesForSale = PropertyService.getPropertiesForSale();
 
 }])

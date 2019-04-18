@@ -30,13 +30,13 @@ scene.add(directionalLight);
 
 // Import model
 var mtlLoader = new THREE.MTLLoader();
-mtlLoader.setPath("models/frontpage_building/");
+mtlLoader.setPath("models/4-floor-residential/");
 mtlLoader.load("city3.mtl", function(materials) {
     materials.preload();
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.setPath("models/frontpage_building/");
-    objLoader.load("city3.obj", function (object) {
+    objLoader.setPath("models/4-floor-residential/");
+    objLoader.load("city3.obj", function(object) {
       object.scale.set(0.4, 0.4, 0.4);
       object.position.set(-8, 1, 11);
       scene.add(object);
