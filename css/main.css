@@ -22,7 +22,7 @@ header {
   height: 20%;
 }
 
-header > h1 {
+h1 {
   font-weight: lighter;
 }
 
@@ -45,4 +45,27 @@ ng-view {
   top: 20%;
   display: block;
   position: absolute;
+}
+
+property-item {
+  border: solid;
+  display: inline-block;
+  width: 40%;
+  margin: 5%;
+  padding: 1%;
+  text-align: center;
+  transition: padding, 0.3s;
+}
+
+property-item:hover {
+  padding: 2%;
+}
+
+property-item > h3 {
+  margin: 1%;
+  font-weight: lighter;
+}
+
+property-item > img {
+  width: 100%;
 }
