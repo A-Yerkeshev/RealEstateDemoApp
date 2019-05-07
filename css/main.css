@@ -5,6 +5,26 @@
   text-shadow: 0 0 10px #000;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
 body {
   margin: 0;
   overflow: hidden;
@@ -45,13 +65,15 @@ ng-view {
   top: 20%;
   display: block;
   position: absolute;
+  overflow-y: scroll;
 }
 
 property-item {
   border: solid;
   display: inline-block;
   width: 40%;
-  margin: 5%;
+  vertical-align: top;
+  margin: 3%;
   padding: 1%;
   text-align: center;
   transition: padding, 0.3s;
@@ -66,6 +88,10 @@ property-item > h3 {
   font-weight: lighter;
 }
 
-property-item > img {
+property-item > div {
+  width: 100%;
+}
+
+.prop-image {
   width: 100%;
 }

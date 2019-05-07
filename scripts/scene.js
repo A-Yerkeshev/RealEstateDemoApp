@@ -11,6 +11,7 @@ controls.autoRotate = true;
 controls.autoRotateSpeed = 0.5;
 controls.minDistance = 6;
 controls.maxDistance = 15;
+controls.enabled = false;
 
 function onWindowResize() {
   camera.aspect = window.innerWidth/window.innerHeight;
@@ -28,37 +29,45 @@ scene.add(ambientLight);
 var directionalLight = new THREE.DirectionalLight(0xFFFEE1);
 scene.add(directionalLight);
 
-// Import model
-var mtlLoader = new THREE.MTLLoader();
-mtlLoader.setPath("models/4-floor-residential/");
-mtlLoader.load("city3.mtl", function(materials) {
-    materials.preload();
-    var objLoader = new THREE.OBJLoader();
-    objLoader.setMaterials(materials);
-    objLoader.setPath("models/4-floor-residential/");
-    objLoader.load("city3.obj", function(object) {
-      object.scale.set(0.4, 0.4, 0.4);
-      object.position.set(-8, 1, 11);
-      scene.add(object);
-    }, undefined, function(error) {
-      console.error(error);
-    });
-});
-
 var geometry = new THREE.PlaneGeometry( 12, 12 );
 var material = new THREE.MeshLambertMaterial( {color: 0x2D2D2D} );
 var floor = new THREE.Mesh( geometry, material );
 // Turn floor 90 deg
 floor.rotateX(-90 * Math.PI/180);
-scene.add( floor );
+scene.add(floor);
 
+var mtlLoader = new THREE.MTLLoader();
+var objLoader = new THREE.OBJLoader();
+
+function loadModel(path, modelname) {
+  // Clean existing models
+  while (scene.children.length > 3) {
+    scene.remove(scene.children[3]);
+  };
+
+  // Load selected model
+  mtlLoader.setPath(path);
+  mtlLoader.load(modelname + ".mtl", function(materials) {
+      materials.preload();
+      objLoader.setMaterials(materials);
+      objLoader.setPath(path);
+      objLoader.load(modelname + ".obj", function(object) {
+        object.scale.set(0.4, 0.4, 0.4);
+        object.position.set(-8, 1, 11);
+        scene.add(object);
+      }, undefined, function(error) {
+        console.error(error);
+      });
+  });
+};
 
 function animate() {
-  requestAnimationFrame( animate );
+  requestAnimationFrame(animate);
 
   controls.update();
 
-  renderer.render( scene, camera );
+  renderer.render(scene, camera);
 };
 
+loadModel('models/4fl-residential/', 'city3');
 animate();

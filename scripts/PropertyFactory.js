@@ -7,11 +7,29 @@ Module.factory('PropertyFactory', [function() {
       name: 'Appartment in 4 floor residential house',
       forSale: true,
       forRent: true,
-      directory: 'models/4-floor-residential/',
+      directory: 'models/4fl-residential/',
       image: 'image.jpg',
       model: 'city3.obj',
       textures: 'city3.mtl'
-    }
+    }, {
+      id: 2,
+      name: 'Country cottage',
+      forSale: true,
+      forRent: false,
+      directory: 'models/country-cottage/',
+      image: 'image.jpg',
+      model: 'houseA_obj.obj',
+      textures: 'houseA_obj.mtl'
+    }, {
+      id: 3,
+      name: 'Appartment in 2 floor residential house',
+      forSale: true,
+      forRent: true,
+      directory: 'models/2fl-residential/',
+      image: 'image.jpg',
+      model: 'residental_building.obj',
+      textures: 'residental_building.mtl'
+    },
   ];
 
   Factory.getPropertiesForSale = function() {
