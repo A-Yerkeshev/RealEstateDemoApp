@@ -39,7 +39,7 @@ scene.add(floor);
 var mtlLoader = new THREE.MTLLoader();
 var objLoader = new THREE.OBJLoader();
 
-function loadModel(format, path, modelname) {
+function loadModel(format, path, modelname, adj) {
   // Clean existing models
   while (scene.children.length > 3) {
     scene.remove(scene.children[3]);
@@ -54,8 +54,8 @@ function loadModel(format, path, modelname) {
           objLoader.setMaterials(materials);
           objLoader.setPath(path);
           objLoader.load(modelname + ".obj", function(model) {
-            model.scale.set(0.4, 0.4, 0.4);
-            model.position.set(-8, 1, 11);
+            model.scale.set(adj.scale, adj.scale, adj.scale);
+            model.position.set(adj.posX, adj.posY, adj.posZ);
             scene.add(model);
           }, undefined, function(error) {
             console.error(error);
@@ -72,5 +72,10 @@ function animate() {
 };
 
 //Load default model
-loadModel('obj', 'models/4fl-residential/', 'city3');
+loadModel('obj', 'models/4fl-residential/', 'city3', {
+  scale: 0.4,
+  posX: -8,
+  posY: 1,
+  posZ: 11
+});
 animate();

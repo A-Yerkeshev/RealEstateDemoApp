@@ -12,7 +12,13 @@ Module.factory('PropertyFactory', [function() {
       model: {
         directory: 'models/4fl-residential/',
         image: 'image.jpg',
-        modelname: 'city3'
+        modelname: 'city3',
+        adjustments: {
+          scale: 0.4,
+          posX: -8,
+          posY: 1,
+          posZ: 11
+        }
       }
     }, {
       id: 2,
