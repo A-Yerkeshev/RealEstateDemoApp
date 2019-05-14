@@ -12,8 +12,7 @@ Module.factory('PropertyFactory', [function() {
       model: {
         directory: 'models/4fl-residential/',
         image: 'image.jpg',
-        modelname: 'city3.obj',
-        textures: 'city3.mtl'
+        modelname: 'city3'
       }
     }, {
       id: 2,
@@ -24,8 +23,7 @@ Module.factory('PropertyFactory', [function() {
       model: {
         directory: 'models/country-cottage/',
         image: 'image.jpg',
-        modelname: 'houseA_obj.obj',
-        textures: 'houseA_obj.mtl'
+        modelname: 'houseA_obj'
       }
     }, {
       id: 3,
@@ -36,8 +34,7 @@ Module.factory('PropertyFactory', [function() {
       model: {
         directory: 'models/2fl-residential/',
         image: 'image.jpg',
-        modelname: 'residental_building.obj',
-        textures: 'residental_building.mtl'
+        modelname: 'residental_building'
       }
     },
   ];
