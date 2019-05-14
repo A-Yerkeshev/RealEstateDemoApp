@@ -10,8 +10,8 @@ controls.target = new THREE.Vector3(0, 4, 0);
 controls.autoRotate = true;
 controls.autoRotateSpeed = 0.5;
 controls.minDistance = 6;
-controls.maxDistance = 15;
-controls.enabled = false;
+//controls.maxDistance = 15;
+//controls.enabled = false;
 
 function onWindowResize() {
   camera.aspect = window.innerWidth/window.innerHeight;
@@ -39,35 +39,38 @@ scene.add(floor);
 var mtlLoader = new THREE.MTLLoader();
 var objLoader = new THREE.OBJLoader();
 
-function loadModel(path, modelname) {
+function loadModel(format, path, modelname) {
   // Clean existing models
   while (scene.children.length > 3) {
     scene.remove(scene.children[3]);
   };
 
-  // Load selected model
-  mtlLoader.setPath(path);
-  mtlLoader.load(modelname + ".mtl", function(materials) {
-      materials.preload();
-      objLoader.setMaterials(materials);
-      objLoader.setPath(path);
-      objLoader.load(modelname + ".obj", function(object) {
-        object.scale.set(0.4, 0.4, 0.4);
-        object.position.set(-8, 1, 11);
-        scene.add(object);
-      }, undefined, function(error) {
-        console.error(error);
+  // Load new model
+  switch (format) {
+    case 'obj':
+      mtlLoader.setPath(path);
+      mtlLoader.load(modelname + ".mtl", function(materials) {
+          materials.preload();
+          objLoader.setMaterials(materials);
+          objLoader.setPath(path);
+          objLoader.load(modelname + ".obj", function(model) {
+            model.scale.set(0.4, 0.4, 0.4);
+            model.position.set(-8, 1, 11);
+            scene.add(model);
+          }, undefined, function(error) {
+            console.error(error);
+          });
       });
-  });
+      break;
+  };
 };
 
 function animate() {
   requestAnimationFrame(animate);
-
   controls.update();
-
   renderer.render(scene, camera);
 };
 
-loadModel('models/4fl-residential/', 'city3');
+//Load default model
+loadModel('obj', 'models/4fl-residential/', 'city3');
 animate();

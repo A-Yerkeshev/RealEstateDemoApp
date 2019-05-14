@@ -1,34 +1,44 @@
 Module.factory('PropertyFactory', [function() {
   var Factory = {};
+  var currentProperty = null;
 
   var properties = [
     {
       id: 1,
       name: 'Appartment in 4 floor residential house',
+      url: '4fl-residential',
       forSale: true,
       forRent: true,
-      directory: 'models/4fl-residential/',
-      image: 'image.jpg',
-      model: 'city3.obj',
-      textures: 'city3.mtl'
+      model: {
+        directory: 'models/4fl-residential/',
+        image: 'image.jpg',
+        modelname: 'city3.obj',
+        textures: 'city3.mtl'
+      }
     }, {
       id: 2,
       name: 'Country cottage',
+      url: 'country-cottage',
       forSale: true,
       forRent: false,
-      directory: 'models/country-cottage/',
-      image: 'image.jpg',
-      model: 'houseA_obj.obj',
-      textures: 'houseA_obj.mtl'
+      model: {
+        directory: 'models/country-cottage/',
+        image: 'image.jpg',
+        modelname: 'houseA_obj.obj',
+        textures: 'houseA_obj.mtl'
+      }
     }, {
       id: 3,
       name: 'Appartment in 2 floor residential house',
+      url: '2fl-residential',
       forSale: true,
       forRent: true,
-      directory: 'models/2fl-residential/',
-      image: 'image.jpg',
-      model: 'residental_building.obj',
-      textures: 'residental_building.mtl'
+      model: {
+        directory: 'models/2fl-residential/',
+        image: 'image.jpg',
+        modelname: 'residental_building.obj',
+        textures: 'residental_building.mtl'
+      }
     },
   ];
 
@@ -54,6 +64,14 @@ Module.factory('PropertyFactory', [function() {
     });
 
     return list;
+  };
+
+  Factory.getCurrentProperty = function() {
+    return currentProperty;
+  };
+
+  Factory.setCurrentProperty = function(property) {
+    currentProperty = property;
   };
 
   return Factory;

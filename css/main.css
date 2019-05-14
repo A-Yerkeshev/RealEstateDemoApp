@@ -5,22 +5,18 @@
   text-shadow: 0 0 10px #000;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 1.5em;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px white;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: grey;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: white;
 }
@@ -60,6 +56,7 @@ a:hover {
 }
 
 ng-view {
+  text-align: center;
   width: 100%;
   height: 80%;
   top: 20%;
@@ -68,30 +65,33 @@ ng-view {
   overflow-y: scroll;
 }
 
-property-item {
+.property-item {
   border: solid;
   display: inline-block;
-  width: 40%;
+  width: 30%;
   vertical-align: top;
-  margin: 3%;
+  margin: 1%;
   padding: 1%;
   text-align: center;
   transition: padding, 0.3s;
 }
 
-property-item:hover {
+.property-item:hover {
   padding: 2%;
 }
 
-property-item > h3 {
+.property-item > h3 {
   margin: 1%;
   font-weight: lighter;
 }
 
-property-item > div {
-  width: 100%;
+.container {
+  padding: 1%;
+  height: 20em;
+  overflow: hidden;
 }
 
 .prop-image {
-  width: 100%;
+  height: 100%;
+  border: solid #5D5D5D;
 }

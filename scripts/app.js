@@ -11,5 +11,8 @@ Module.config(function($routeProvider) {
     .when('/rent', {
       templateUrl: 'views/catalog.html'
     })
+    .when('/:property', {
+      templateUrl: 'views/property.html'
+    })
     .otherwise('/');
 });
