@@ -14,9 +14,11 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
     switch (path) {
       case '/buy':
         $scope.properties = PropertyFactory.getPropertiesForSale();
+        controls.enabled = false;
         break;
       case '/rent':
         $scope.properties = PropertyFactory.getPropertiesForRent();
+        controls.enabled = false;
         break;
     };
 
@@ -30,6 +32,7 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
           $scope.currentProperty.model.directory,
           $scope.currentProperty.model.modelname,
           $scope.currentProperty.model.adjustments);
+        controls.enabled = true;
       };
     });
 

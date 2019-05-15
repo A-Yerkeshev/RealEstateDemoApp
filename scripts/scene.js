@@ -7,11 +7,10 @@ var controls = new THREE.OrbitControls(camera);
 camera.position.set(0, 5, 10);
 controls.update();
 controls.target = new THREE.Vector3(0, 4, 0);
-//controls.autoRotate = true;
-//controls.autoRotateSpeed = 0.5;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.5;
 controls.minDistance = 6;
-//controls.maxDistance = 15;
-//controls.enabled = false;
+controls.maxDistance = 15;
 
 function onWindowResize() {
   camera.aspect = window.innerWidth/window.innerHeight;
