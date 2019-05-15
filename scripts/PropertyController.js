@@ -24,13 +24,12 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
     $scope.$on('$routeChangeSuccess', function() {
       var params = $route.current.params;
 
-      console.log($scope.currentProperty)
-
       if (params.hasOwnProperty('property')) {
         loadModel(
           'obj',
           $scope.currentProperty.model.directory,
-          $scope.currentProperty.model.modelname);
+          $scope.currentProperty.model.modelname,
+          $scope.currentProperty.model.adjustments);
       };
     });
 

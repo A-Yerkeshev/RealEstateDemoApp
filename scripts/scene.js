@@ -7,8 +7,8 @@ var controls = new THREE.OrbitControls(camera);
 camera.position.set(0, 5, 10);
 controls.update();
 controls.target = new THREE.Vector3(0, 4, 0);
-controls.autoRotate = true;
-controls.autoRotateSpeed = 0.5;
+//controls.autoRotate = true;
+//controls.autoRotateSpeed = 0.5;
 controls.minDistance = 6;
 //controls.maxDistance = 15;
 //controls.enabled = false;
@@ -56,6 +56,9 @@ function loadModel(format, path, modelname, adj) {
           objLoader.load(modelname + ".obj", function(model) {
             model.scale.set(adj.scale, adj.scale, adj.scale);
             model.position.set(adj.posX, adj.posY, adj.posZ);
+            model.rotateX(adj.rotX * Math.PI/180);
+            model.rotateY(adj.rotY * Math.PI/180);
+            model.rotateZ(adj.rotZ * Math.PI/180);
             scene.add(model);
           }, undefined, function(error) {
             console.error(error);
@@ -76,6 +79,9 @@ loadModel('obj', 'models/4fl-residential/', 'city3', {
   scale: 0.4,
   posX: -8,
   posY: 1,
-  posZ: 11
+  posZ: 11,
+  rotX: 0,
+  rotY: 0,
+  rotZ: 0
 });
 animate();

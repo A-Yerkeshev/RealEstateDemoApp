@@ -17,7 +17,10 @@ Module.factory('PropertyFactory', [function() {
           scale: 0.4,
           posX: -8,
           posY: 1,
-          posZ: 11
+          posZ: 11,
+          rotX: 0,
+          rotY: 0,
+          rotZ: 0
         }
       }
     }, {
@@ -29,7 +32,16 @@ Module.factory('PropertyFactory', [function() {
       model: {
         directory: 'models/country-cottage/',
         image: 'image.jpg',
-        modelname: 'houseA_obj'
+        modelname: 'houseA_obj',
+        adjustments: {
+          scale: 0.1,
+          posX: 1,
+          posY: 0,
+          posZ: 0,
+          rotX: 0,
+          rotY: 90,
+          rotZ: 0
+        }
       }
     }, {
       id: 3,
@@ -40,7 +52,16 @@ Module.factory('PropertyFactory', [function() {
       model: {
         directory: 'models/2fl-residential/',
         image: 'image.jpg',
-        modelname: 'residental_building'
+        modelname: 'residental_building',
+        adjustments: {
+          scale: 1,
+          posX: 0,
+          posY: 0,
+          posZ: 2,
+          rotX: 0,
+          rotY: 0,
+          rotZ: 0
+        }
       }
     },
   ];
