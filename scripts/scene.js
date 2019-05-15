@@ -9,6 +9,7 @@ controls.update();
 controls.target = new THREE.Vector3(0, 4, 0);
 controls.autoRotate = true;
 controls.autoRotateSpeed = 0.5;
+controls.maxPolarAngle = (Math.PI/2);
 controls.minDistance = 6;
 controls.maxDistance = 15;
 
