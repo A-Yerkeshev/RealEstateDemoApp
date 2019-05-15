@@ -5,7 +5,7 @@ Module.factory('PropertyFactory', [function() {
   var properties = [
     {
       id: 1,
-      name: 'Appartment in 4 floor residential house',
+      name: 'Apartment in 4 floor residential house',
       url: '4fl-residential',
       forSale: true,
       forRent: true,
@@ -45,7 +45,7 @@ Module.factory('PropertyFactory', [function() {
       }
     }, {
       id: 3,
-      name: 'Appartment in 2 floor residential house',
+      name: 'Apartment in 2 floor residential house',
       url: '2fl-residential',
       forSale: true,
       forRent: true,

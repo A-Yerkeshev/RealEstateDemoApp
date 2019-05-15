@@ -14,12 +14,17 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
     switch (path) {
       case '/buy':
         $scope.properties = PropertyFactory.getPropertiesForSale();
+        $('html').removeClass('hide-scrollbar');
         controls.enabled = false;
         break;
       case '/rent':
         $scope.properties = PropertyFactory.getPropertiesForRent();
+        $('html').removeClass('hide-scrollbar');
         controls.enabled = false;
         break;
+      default:
+        $('html').addClass('hide-scrollbar');
+        controls.enabled = true;
     };
 
     //Load model of selected property
@@ -32,7 +37,6 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
           $scope.currentProperty.model.directory,
           $scope.currentProperty.model.modelname,
           $scope.currentProperty.model.adjustments);
-        controls.enabled = true;
       };
     });
 
