@@ -14,5 +14,8 @@ Module.config(function($routeProvider) {
     .when('/:property', {
       templateUrl: 'views/property.html'
     })
+    .when('/:property/info', {
+      templateUrl: 'views/property-info.html'
+    })
     .otherwise('/');
 });
