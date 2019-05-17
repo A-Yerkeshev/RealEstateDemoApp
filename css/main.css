@@ -47,11 +47,14 @@ h1 {
 }
 
 a {
+  text-decoration: none;
+  cursor: default;
+}
+
+header a {
   border: solid;
   padding: 1%;
   margin: 0.5%;
-  cursor: default;
-  text-decoration: none;
   transition: padding, 0.3s;
 }
 
@@ -99,4 +102,18 @@ ng-view {
 .prop-image {
   height: 100%;
   border: solid #5D5D5D;
+}
+
+#info-button {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: 1.7em;
+  border: solid;
+  transition: padding, 0.3s;
+  padding: 2%;
+}
+
+#info-button:hover {
+  padding: 3%;
 }
