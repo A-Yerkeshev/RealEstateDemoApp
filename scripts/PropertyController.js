@@ -1,6 +1,7 @@
 Module.controller('PropertyController', ['$scope', '$route', '$location', 'PropertyFactory',
   function($scope, $route, $location, PropertyFactory) {
     var path = $location.path();
+    path = path.substring(path.lastIndexOf('/') + 1);
 
     $scope.currentProperty = PropertyFactory.getCurrentProperty();
     $scope.properties = null;
@@ -12,12 +13,12 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
 
     //Get list of properties for sale or for rent
     switch (path) {
-      case '/buy':
+      case 'buy':
         $scope.properties = PropertyFactory.getPropertiesForSale();
         $('html').removeClass('hide-scrollbar');
         controls.enabled = false;
         break;
-      case '/rent':
+      case 'rent':
         $scope.properties = PropertyFactory.getPropertiesForRent();
         $('html').removeClass('hide-scrollbar');
         controls.enabled = false;
@@ -31,7 +32,7 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
     $scope.$on('$routeChangeSuccess', function() {
       var params = $route.current.params;
 
-      if (params.hasOwnProperty('property')) {
+      if (params.hasOwnProperty('property') && path != 'info') {
         loadModel(
           'obj',
           $scope.currentProperty.model.directory,
