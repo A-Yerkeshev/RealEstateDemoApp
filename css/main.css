@@ -104,7 +104,7 @@ ng-view {
   border: solid #5D5D5D;
 }
 
-#info-button {
+.info-button {
   position: absolute;
   bottom: 1em;
   right: 1em;
@@ -114,6 +114,6 @@ ng-view {
   padding: 2%;
 }
 
-#info-button:hover {
+.info-button:hover {
   padding: 3%;
 }

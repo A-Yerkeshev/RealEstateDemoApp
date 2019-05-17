@@ -1,7 +1,6 @@
 Module.controller('PropertyController', ['$scope', '$route', '$location', 'PropertyFactory',
   function($scope, $route, $location, PropertyFactory) {
-    var path = $location.path();
-    path = path.substring(path.lastIndexOf('/') + 1);
+    var path = $location.path().substring(1);
 
     $scope.currentProperty = PropertyFactory.getCurrentProperty();
     $scope.properties = null;
@@ -28,18 +27,18 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
         controls.enabled = true;
     };
 
-    //Load model of selected property
-    $scope.$on('$routeChangeSuccess', function() {
-      var params = $route.current.params;
+    //Load model of selected property if another model is loaded
+    $scope.$on('$routeChangeSuccess', function(event, current, prev) {
 
-      if (params.hasOwnProperty('property') && path != 'info') {
+      if (current.params['property'] != prev.params['property'] &&
+        current.params['property'] != undefined) {
         loadModel(
           'obj',
           $scope.currentProperty.model.directory,
           $scope.currentProperty.model.modelname,
-          $scope.currentProperty.model.adjustments);
+          $scope.currentProperty.model.adjustments
+        );
       };
     });
-
 
 }])

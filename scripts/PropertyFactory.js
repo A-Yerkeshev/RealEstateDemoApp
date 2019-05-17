@@ -98,6 +98,14 @@ Module.factory('PropertyFactory', [function() {
     currentProperty = property;
   };
 
+  Factory.getPropertyById = function(id) {
+    for (var i=0; i++; i<properties.length) {
+      if (property.id == id) {
+        return property;
+      };
+    };
+  };
+
   return Factory;
 
 }]);
