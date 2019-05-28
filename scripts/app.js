@@ -11,17 +11,17 @@ Module.config(function($routeProvider) {
     .when('/rent', {
       templateUrl: 'views/catalog.html'
     })
-    .when('/:property', {
-      templateUrl: 'views/property.html'
-    })
-    .when('/:property/info', {
-      templateUrl: 'views/property-info.html'
-    })
     .when('/about', {
       templateUrl: 'views/about.html'
     })
     .when('/contacts', {
       templateUrl: 'views/contacts.html'
+    })
+    .when('/:property', {
+      templateUrl: 'views/property.html'
+    })
+    .when('/:property/info', {
+      templateUrl: 'views/property-info.html'
     })
     .otherwise('/');
 });

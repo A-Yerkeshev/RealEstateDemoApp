@@ -145,6 +145,10 @@ ng-view {
 }
 
 .char-list {
-  display: flex;
   text-align: left;
+}
+
+.about > p {
+  margin: 2%;
+  padding: 2%;
 }

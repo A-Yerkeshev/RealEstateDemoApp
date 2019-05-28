@@ -22,6 +22,10 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
         $('html').removeClass('hide-scrollbar');
         controls.enabled = false;
         break;
+      case 'info':
+        $('html').removeClass('hide-scrollbar');
+        controls.enabled = false;
+        break;
       default:
         $('html').addClass('hide-scrollbar');
         controls.enabled = true;
