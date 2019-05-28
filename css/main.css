@@ -117,3 +117,34 @@ ng-view {
 .info-button:hover {
   padding: 3%;
 }
+
+#property-info {
+  border: solid;
+  margin: 2%;
+  padding: 1%;
+  height: 25em;
+}
+
+#property-info > img {
+  float: left;
+  margin-right: 2%;
+}
+
+#property-info > p {
+  border-bottom: solid;
+  padding-bottom: 1%;
+  display: flex;
+}
+
+.price-info {
+  list-style: none;
+}
+
+.price-info li {
+  text-align: left;
+}
+
+.char-list {
+  display: flex;
+  text-align: left;
+}

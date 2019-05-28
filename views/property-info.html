@@ -1,3 +1,15 @@
 <div ng-controller="PropertyController">
+  <div id="property-info">
+    <img class="prop-image" ng-src={{currentProperty.model.directory+currentProperty.model.image}}>
+    <p>{{currentProperty.description}}</p>
+    <ul class="price-info">
+      <li>Price for sale: {{currentProperty.price.sale}}</li>
+      <li>Price for rent: {{currentProperty.price.rent}}</li>
+      <li>Area: {{currentProperty.area}} m2</li>
+    </ul>
+    <ul class="char-list">
+      <li ng-repeat="char in currentProperty.characteristics">{{char}}</li>
+    </ul>
+  </div>
   <a class="info-button" ng-href="#!/{{currentProperty.url}}">Hide info</a>
 </div>
