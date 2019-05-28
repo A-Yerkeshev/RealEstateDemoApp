@@ -17,5 +17,11 @@ Module.config(function($routeProvider) {
     .when('/:property/info', {
       templateUrl: 'views/property-info.html'
     })
+    .when('/about', {
+      templateUrl: 'views/about.html'
+    })
+    .when('/contacts', {
+      templateUrl: 'views/contacts.html'
+    })
     .otherwise('/');
 });
