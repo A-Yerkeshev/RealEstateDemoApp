@@ -151,4 +151,6 @@ ng-view {
 .about > p {
   margin: 2%;
   padding: 2%;
+  border: solid;
+  background-color: #2B2B2B;
 }
