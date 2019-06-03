@@ -10,7 +10,6 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
       PropertyFactory.setCurrentProperty(property);
     };
 
-    console.log(path)
     switch (path) {
       case 'buy':
         $scope.properties = PropertyFactory.getPropertiesForSale();

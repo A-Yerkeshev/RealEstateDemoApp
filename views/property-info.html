@@ -8,7 +8,7 @@
       <li>Area: {{currentProperty.area}} m2</li>
     </ul>
     <ul class="char-list">
-      <li ng-repeat="char in currentProperty.characteristics">{{char}}</li>
+      <li ng-repeat="(char, value) in currentProperty.characteristics" ng-class="{positive: value, negative: value == false}">{{char}}</li>
     </ul>
   </div>
   <a class="info-button" ng-href="#!/{{currentProperty.url}}">Hide info</a>

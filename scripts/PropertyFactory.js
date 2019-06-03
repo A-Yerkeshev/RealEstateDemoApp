@@ -15,12 +15,12 @@ Module.factory('PropertyFactory', [function() {
       },
       area: 40,
       characteristics: {
-        needsRenovation: false,
-        storagePlace: true,
-        parking: true,
-        bikeParking: true,
-        heating: false,
-        laundry: true
+        'Needs renovation': false,
+        'Storage place': true,
+        'Parking': true,
+        'Bike parking': true,
+        'Heating': false,
+        'Laundry': true
       },
       model: {
         directory: 'models/4fl-residential/',
@@ -53,12 +53,12 @@ Module.factory('PropertyFactory', [function() {
       },
       area: 60,
       characteristics: {
-        needsRenovation: false,
-        storagePlace: true,
-        parking: true,
-        bikeParking: false,
-        heating: true,
-        laundry: true
+        'Needs renovation': false,
+        'Storage place': true,
+        'Parking': true,
+        'Bike parking': false,
+        'Heating': true,
+        'Laundry': true
       },
       model: {
         directory: 'models/country-cottage/',
@@ -91,12 +91,12 @@ Module.factory('PropertyFactory', [function() {
       },
       area: 34,
       characteristics: {
-        needsRenovation: false,
-        storagePlace: false,
-        parking: true,
-        bikeParking: true,
-        heating: false,
-        laundry: true
+        'Needs renovation': false,
+        'Storage place': false,
+        'Parking': true,
+        'Bike parking': true,
+        'Heating': false,
+        'Laundry': true
       },
       model: {
         directory: 'models/2fl-residential/',
