@@ -70,6 +70,29 @@ ng-view {
   display: block;
   position: absolute;
   overflow-y: scroll;
+  background-color: blue;
+}
+
+ng-view.ng-enter,
+ng-view.ng-leave {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+ng-view.ng-enter {
+  top: 100%;
+}
+
+ng-view.ng-enter-active {
+  top: 20%;
+}
+
+ng-view.ng-leave {
+  top: 20%;
+}
+
+ng-view.ng-leave-active {
+  top: 100%;
 }
 
 .property-item {
