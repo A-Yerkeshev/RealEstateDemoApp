@@ -197,3 +197,17 @@ a:hover {
   border: solid;
   background-color: #2B2B2B;
 }
+
+.contacts {
+  margin: 5%;
+  padding: 2%;
+  border: solid;
+  background-color: #4F4F4F;
+  width: 90%;
+}
+
+.contacts th, td {
+  border: solid;
+  padding: 2%;
+  background-color: #2B2B2B;
+}

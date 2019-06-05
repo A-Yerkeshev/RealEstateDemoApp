@@ -31,7 +31,12 @@ Module.controller('PropertyController', ['$scope', '$route', '$location', 'Prope
         break;
       default:
         $('html').addClass('hide-scrollbar');
-        controls.enabled = true;
+        // Disable controls if current page is property info page
+        if (path.substring(path.lastIndexOf('/') + 1) == 'info') {
+          controls.enabled = false;
+        } else {
+          controls.enabled = true;
+        };
     };
 
     //Load model of selected property if another model is loaded
