@@ -1,4 +1,4 @@
-var Module = angular.module('RealEstateApp', ['ngRoute']);
+var Module = angular.module('RealEstateApp', ['ngAnimate', 'ngRoute']);
 
 Module.config(function($routeProvider) {
   $routeProvider
