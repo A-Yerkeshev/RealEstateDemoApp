@@ -1,6 +1,6 @@
-echo "script starting"
+#!/bin/bash
+
 cd dist
 npm install
 cd ..
 node web.js
-echo "script executed"
