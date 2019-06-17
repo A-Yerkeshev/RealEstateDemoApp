@@ -12,6 +12,7 @@
     "three": "0.103.x"
   },
   "scripts": {
-    "start": "bash start.sh"
+    "prestart": "bash install.sh",
+    "start": "node web.js"
   }
 }
