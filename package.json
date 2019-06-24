@@ -5,11 +5,13 @@
     "angular": "1.7.x",
     "angular-animate": "^1.7.8",
     "angular-route": "1.7.x",
+    "jquery": "3.4.x",
+    "three": "0.103.x"
+  },
+  "dependencies": {
     "express": "^4.17.1",
     "gzippo": "^0.2.0",
-    "jquery": "3.4.x",
-    "morgan": "^1.9.1",
-    "three": "0.103.x"
+    "morgan": "^1.9.1"
   },
   "scripts": {
     "start": "bash start.sh"
