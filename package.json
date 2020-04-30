@@ -5,7 +5,7 @@
     "angular": "1.7.x",
     "angular-animate": "^1.7.8",
     "angular-route": "1.7.x",
-    "jquery": "3.4.x",
+    "jquery": "3.5.x",
     "three": "0.103.x"
   },
   "dependencies": {
