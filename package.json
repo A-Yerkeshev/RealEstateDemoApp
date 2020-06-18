@@ -2,7 +2,7 @@
   "name": "RealEstateApp",
   "version": "0.0.0",
   "devDependencies": {
-    "angular": "1.7.x",
+    "angular": "1.8.x",
     "angular-animate": "^1.7.8",
     "angular-route": "1.7.x",
     "jquery": "3.4.x",
