@@ -6,7 +6,7 @@
     "angular-animate": "^1.7.8",
     "angular-route": "1.7.x",
     "jquery": "3.4.x",
-    "three": "0.103.x"
+    "three": "0.137.x"
   },
   "dependencies": {
     "express": "^4.17.1",
